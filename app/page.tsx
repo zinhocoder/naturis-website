@@ -37,145 +37,145 @@ export default function HomePage() {
 
         {/* Floating elements for visual appeal */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-40 left-20 w-24 h-24 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-full blur-xl animate-pulse delay-2000"></div>
-          <div className="absolute bottom-20 right-10 w-16 h-16 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse delay-3000"></div>
+          <div className="absolute top-10 left-5 w-12 h-12 md:top-20 md:left-10 md:w-20 md:h-20 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-20 right-5 w-20 h-20 md:top-40 md:right-20 md:w-32 md:h-32 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-5 w-16 h-16 md:bottom-40 md:left-20 md:w-24 md:h-24 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-full blur-xl animate-pulse delay-2000"></div>
+          <div className="absolute bottom-10 right-5 w-10 h-10 md:bottom-20 md:right-10 md:w-16 md:h-16 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-xl animate-pulse delay-3000"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center text-center">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="mb-8">
-              <span className="inline-block bg-slate-900/80 backdrop-blur-sm text-cyan-300 px-8 py-4 rounded-full text-sm font-semibold mb-8 border border-cyan-400/30 shadow-lg">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="mb-4 sm:mb-8">
+              <span className="inline-block bg-slate-900/80 backdrop-blur-sm text-cyan-300 px-4 py-2 sm:px-8 sm:py-4 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-8 border border-cyan-400/30 shadow-lg">
                 {t("hero.subtitle")}
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight">
-              <span className="text-white block mb-4 drop-shadow-2xl">{t("hero.title1")}</span>
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 sm:mb-8 leading-tight">
+              <span className="text-white block mb-2 sm:mb-4 drop-shadow-2xl">{t("hero.title1")}</span>
               <span className="bg-gradient-to-r from-green-400 via-cyan-400 to-green-500 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
                 {t("hero.title2")}
               </span>
             </h1>
 
-            <p className="text-xl md:text-3xl text-white/95 mb-12 max-w-4xl mx-auto leading-relaxed font-light drop-shadow-lg">
+            <p className="text-lg sm:text-xl md:text-3xl text-white/95 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed font-light drop-shadow-lg px-4">
               {t("hero.description")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-8 sm:mb-16 px-4">
               <Button
                 asChild
-                className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-bold px-12 py-5 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-green-500/25"
+                className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-bold px-6 py-3 sm:px-12 sm:py-5 rounded-full text-base sm:text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-green-500/25 w-full sm:w-auto"
               >
                 <Link href="/passeios">{t("hero.cta1")}</Link>
               </Button>
               <Button
                 onClick={openWhatsApp}
                 variant="outline"
-                className="border-3 border-white text-white hover:bg-white hover:text-slate-900 px-12 py-5 rounded-full text-xl bg-transparent backdrop-blur-sm transform hover:scale-105 transition-all duration-300 shadow-2xl"
+                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-slate-900 px-6 py-3 sm:px-12 sm:py-5 rounded-full text-base sm:text-xl bg-transparent backdrop-blur-sm transform hover:scale-105 transition-all duration-300 shadow-2xl w-full sm:w-auto"
               >
                 {t("hero.cta2")}
               </Button>
             </div>
 
             {/* Stats section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-3xl font-bold text-white mb-2">5000+</div>
-                <div className="text-cyan-300 text-sm">Turistas Satisfeitos</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto px-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">5000+</div>
+                <div className="text-cyan-300 text-xs sm:text-sm">Turistas Satisfeitos</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-3xl font-bold text-white mb-2">15+</div>
-                <div className="text-cyan-300 text-sm">Anos de Experiência</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">15+</div>
+                <div className="text-cyan-300 text-xs sm:text-sm">Anos de Experiência</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-cyan-300 text-sm">Segurança Garantida</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">100%</div>
+                <div className="text-cyan-300 text-xs sm:text-sm">Segurança Garantida</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
+      <div className="py-12 sm:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-5 left-5 w-32 h-32 sm:top-10 sm:left-10 sm:w-64 sm:h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-5 right-5 w-48 h-48 sm:bottom-10 sm:right-10 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <Card className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-16 rounded-3xl overflow-hidden relative shadow-2xl border border-slate-700">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <Card className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-6 sm:p-16 rounded-2xl sm:rounded-3xl overflow-hidden relative shadow-2xl border border-slate-700">
             {/* Decorative elements with logo colors */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-full -translate-y-48 translate-x-48 animate-pulse"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-cyan-500/10 to-green-500/10 rounded-full translate-y-32 -translate-x-32 animate-pulse delay-1000"></div>
 
             <div className="relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div className="space-y-8">
-                  <div className="flex items-center space-x-4 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+                <div className="space-y-6 sm:space-y-8">
+                  <div className="flex items-center space-x-3 sm:space-x-4 mb-6 sm:mb-8">
                     <div className="relative">
-                      <img src="/images/naturis-logo.png" alt="Naturis" className="h-20 w-20 animate-pulse" />
+                      <img src="/images/naturis-logo.png" alt="Naturis" className="h-12 w-12 sm:h-20 sm:w-20 animate-pulse" />
                       <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
                     </div>
                     <div>
-                      <h2 className="text-white text-3xl font-bold">Naturis</h2>
-                      <p className="text-cyan-300 text-sm tracking-wider font-semibold">TURISMO</p>
+                      <h2 className="text-white text-xl sm:text-3xl font-bold">Naturis</h2>
+                      <p className="text-cyan-300 text-xs sm:text-sm tracking-wider font-semibold">TURISMO</p>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-green-400 text-5xl lg:text-6xl font-bold leading-tight animate-pulse">
+                  <div className="space-y-2 sm:space-y-4">
+                    <h3 className="text-green-400 text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight animate-pulse">
                       {t("company.subtitle1")}
                     </h3>
-                    <h3 className="text-cyan-400 text-5xl lg:text-6xl font-bold leading-tight animate-pulse delay-300">
+                    <h3 className="text-cyan-400 text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight animate-pulse delay-300">
                       {t("company.subtitle2")}
                     </h3>
-                    <h3 className="text-white text-5xl lg:text-6xl font-bold leading-tight mb-8 animate-pulse delay-600">
+                    <h3 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8 animate-pulse delay-600">
                       {t("company.subtitle3")}
                     </h3>
                   </div>
-                  <p className="text-gray-300 text-xl leading-relaxed max-w-lg">{t("company.description")}</p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <p className="text-gray-300 text-base sm:text-xl leading-relaxed max-w-lg">{t("company.description")}</p>
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-bold px-10 py-4 rounded-full transform hover:scale-105 transition-all duration-300 shadow-xl"
+                      className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-full transform hover:scale-105 transition-all duration-300 shadow-xl text-sm sm:text-base"
                     >
                       <Link href="/contato">Fale Conosco</Link>
                     </Button>
                     <Button
                       onClick={openWhatsApp}
                       variant="outline"
-                      className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-10 py-4 rounded-full font-bold transform hover:scale-105 transition-all duration-300"
+                      className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
                     >
                       WhatsApp
                     </Button>
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-6">
+                    <div className="space-y-3 sm:space-y-6">
                       <img
                         src="/iguazu-falls.png"
                         alt="Cataratas"
-                        className="rounded-2xl shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-cyan-400/30 hover:border-cyan-400/60"
+                        className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-cyan-400/30 hover:border-cyan-400/60"
                       />
                       <img
                         src="/colorful-parrot.png"
                         alt="Fauna"
-                        className="rounded-2xl shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-green-400/30 hover:border-green-400/60"
+                        className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-green-400/30 hover:border-green-400/60"
                       />
                     </div>
-                    <div className="space-y-6 pt-12">
+                    <div className="space-y-3 sm:space-y-6 pt-6 sm:pt-12">
                       <img
                         src="/itaipu-dam.png"
                         alt="Itaipu"
-                        className="rounded-2xl shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-cyan-400/30 hover:border-cyan-400/60"
+                        className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-cyan-400/30 hover:border-cyan-400/60"
                       />
                       <img
                         src="/shopping-paraguay.png"
                         alt="Compras"
-                        className="rounded-2xl shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-green-400/30 hover:border-green-400/60"
+                        className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:scale-110 transition-transform duration-500 border-2 border-green-400/30 hover:border-green-400/60"
                       />
                     </div>
                   </div>
@@ -186,108 +186,108 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div id="tours" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t("tours.title")}</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("tours.subtitle")}</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
+      <div id="tours" className="py-12 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">{t("tours.title")}</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">{t("tours.subtitle")}</p>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto mt-4 sm:mt-6 rounded-full"></div>
           </div>
 
           {/* Brasil Tours */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-green-600 mb-8 flex items-center justify-center lg:justify-start">
-              <img src="/brazil-flag.png" alt="Brasil" className="mr-4 h-8 w-10 rounded shadow-md" />
+          <div className="mb-12 sm:mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-6 sm:mb-8 flex items-center justify-center lg:justify-start">
+              <img src="/brazil-flag.png" alt="Brasil" className="mr-3 sm:mr-4 h-6 w-8 sm:h-8 sm:w-10 rounded shadow-md" />
               {t("country.brazil")}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/passeios/cataratas-iguacu">
-                <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
-                  <div className="relative h-64 overflow-hidden rounded-t-lg">
-                    <img
-                      src="/tours/iguazu-panoramic.png"
-                      alt="Cataratas do Iguaçu"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white">
-                        Brasil
-                      </Badge>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
-                        <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span>4.9</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+                              <Link href="/passeios/cataratas-iguacu">
+                  <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                    <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-lg">
+                      <img
+                        src="/tours/iguazu-panoramic.png"
+                        alt="Cataratas do Iguaçu"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
+                        <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs sm:text-sm">
+                          Brasil
+                        </Badge>
+                      </div>
+                      <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
+                        <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-xs sm:text-sm">
+                          <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                          <span>4.9</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
-                      Cataratas do Iguaçu
-                    </h3>
-                    <p className="text-slate-600 text-sm mb-4 line-clamp-3">{t("tour.iguazu.br")}</p>
-                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>4-6 horas</span>
+                    <CardContent className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
+                        Cataratas do Iguaçu
+                      </h3>
+                      <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">{t("tour.iguazu.br")}</p>
+                      <div className="flex items-center justify-between text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <span>4-6 horas</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <span>2-15 pessoas</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        <span>2-15 pessoas</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                        <div className="text-sm sm:text-lg font-semibold text-slate-600">Consulte valores</div>
+                        <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full transform group-hover:scale-105 transition-all duration-300 text-xs sm:text-sm">
+                          Ver Detalhes
+                        </Button>
                       </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-lg font-semibold text-slate-600">Consulte valores</div>
-                      <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 text-white px-6 py-2 rounded-full transform group-hover:scale-105 transition-all duration-300">
-                        Ver Detalhes
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+                    </CardContent>
+                  </Card>
+                </Link>
 
               <Link href="/passeios/macuco-safari">
                 <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
-                  <div className="relative h-64 overflow-hidden rounded-t-lg">
+                  <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-lg">
                     <img
                       src="/tours/macuco-boat.png"
                       alt="Macuco Safari"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white">
+                    <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
+                      <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs sm:text-sm">
                         Brasil
                       </Badge>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
+                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
+                      <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-xs sm:text-sm">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                         <span>4.8</span>
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
-                      Macuco Safari
-                    </h3>
-                    <p className="text-slate-600 text-sm mb-4 line-clamp-3">{t("tour.macuco")}</p>
-                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>3-4 horas</span>
+                                      <CardContent className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
+                        Macuco Safari
+                      </h3>
+                      <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">{t("tour.macuco")}</p>
+                      <div className="flex items-center justify-between text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <span>3-4 horas</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <span>2-20 pessoas</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        <span>2-20 pessoas</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                        <div className="text-sm sm:text-lg font-semibold text-slate-600">Consulte valores</div>
+                        <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full transform group-hover:scale-105 transition-all duration-300 text-xs sm:text-sm">
+                          Ver Detalhes
+                        </Button>
                       </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-lg font-semibold text-slate-600">Consulte valores</div>
-                      <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 text-white px-6 py-2 rounded-full transform group-hover:scale-105 transition-all duration-300">
-                        Ver Detalhes
-                      </Button>
-                    </div>
-                  </CardContent>
+                    </CardContent>
                 </Card>
               </Link>
 
@@ -474,12 +474,12 @@ export default function HomePage() {
           </div>
 
           {/* Argentina Tours */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-blue-600 mb-8 flex items-center justify-center lg:justify-start">
-              <img src="/argentina-flag.png" alt="Argentina" className="mr-4 h-8 w-10 rounded shadow-md" />
+          <div className="mb-12 sm:mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-6 sm:mb-8 flex items-center justify-center lg:justify-start">
+              <img src="/argentina-flag.png" alt="Argentina" className="mr-3 sm:mr-4 h-6 w-8 sm:h-8 sm:w-10 rounded shadow-md" />
               {t("country.argentina")}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
               <Link href="/passeios/cataratas-argentina">
                 <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
                   <div className="relative h-64 overflow-hidden rounded-t-lg">
@@ -528,12 +528,12 @@ export default function HomePage() {
           </div>
 
           {/* Paraguay Tours */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-red-600 mb-8 flex items-center justify-center lg:justify-start">
-              <img src="/paraguay-flag.png" alt="Paraguai" className="mr-4 h-8 w-10 rounded shadow-md" />
+          <div className="mb-12 sm:mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-red-600 mb-6 sm:mb-8 flex items-center justify-center lg:justify-start">
+              <img src="/paraguay-flag.png" alt="Paraguai" className="mr-3 sm:mr-4 h-6 w-8 sm:h-8 sm:w-10 rounded shadow-md" />
               {t("country.paraguay")}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
               <Link href="/passeios/compras-paraguai">
                 <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
                   <div className="relative h-64 overflow-hidden rounded-t-lg">
@@ -590,30 +590,30 @@ export default function HomePage() {
       </div>
 
       {/* Triple Border Section */}
-      <div className="py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 relative overflow-hidden">
+      <div className="py-12 sm:py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-5 left-5 w-32 h-32 sm:top-10 sm:left-10 sm:w-64 sm:h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-5 right-5 w-48 h-48 sm:bottom-10 sm:right-10 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 sm:mb-6">
               Conheça as maravilhas da 
               <span className="bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent block mt-2">
                 TRÍPLICE FRONTEIRA
               </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">
               Experiências únicas com segurança e conforto que você merece em três países incríveis
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {/* Entertainment */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-              <div className="relative h-80 overflow-hidden">
+            <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative h-60 sm:h-80 overflow-hidden">
                 <img 
                   src="/brazilian-dancers.png" 
                   alt="Entertainment" 
@@ -692,10 +692,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Button 
               asChild
-              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-10 py-4 rounded-full text-lg font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-6 py-3 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               <Link href="/passeios">Ver Todos os Passeios</Link>
             </Button>
@@ -704,23 +704,23 @@ export default function HomePage() {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      <div className="py-12 sm:py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-5 right-5 w-32 h-32 sm:top-10 sm:right-10 sm:w-64 sm:h-64 bg-gradient-to-r from-green-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-5 left-5 w-48 h-48 sm:bottom-10 sm:left-10 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-400/5 to-cyan-400/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold text-slate-800 mb-4">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-3 sm:mb-4">
               {t("why.title")}
               <br />
               <span className="bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent">
                 {t("why.company")}
               </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">
               Descubra por que milhares de turistas escolhem a Naturis para suas aventuras na Tríplice Fronteira
             </p>
           </div>
@@ -728,14 +728,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center">
-                    <Star className="w-6 h-6 text-white" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center">
+                    <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-2">Experiência Comprovada</h3>
-                    <p className="text-slate-600">15+ anos de experiência na região, conhecendo cada detalhe dos destinos</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-1 sm:mb-2">Experiência Comprovada</h3>
+                    <p className="text-slate-600 text-sm sm:text-base">15+ anos de experiência na região, conhecendo cada detalhe dos destinos</p>
                   </div>
                 </div>
 

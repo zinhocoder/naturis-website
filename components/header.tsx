@@ -26,27 +26,27 @@ export function Header({ showBackButton = false, backUrl = "/" }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Back Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {showBackButton && (
               <Button
                 asChild
                 variant="ghost"
                 size="sm"
-                className="text-white hover:text-cyan-300 hover:bg-slate-800/50 p-2 rounded-full"
+                className="text-white hover:text-cyan-300 hover:bg-slate-800/50 p-1 sm:p-2 rounded-full"
               >
                 <Link href={backUrl}>
-                  <ArrowLeft className="h-5 w-5" />
+                  <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
             )}
             
-            <Link href="/" className="flex items-center space-x-3">
-              <img src="/images/naturis-logo.png" alt="Naturis Turismo" className="h-14 w-14" />
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
+              <img src="/images/naturis-logo.png" alt="Naturis Turismo" className="h-10 w-10 sm:h-14 sm:w-14" />
               <div className="text-white">
-                <div className="font-bold text-xl">Naturis</div>
-                <div className="text-sm text-cyan-300 tracking-wider">TURISMO</div>
+                <div className="font-bold text-lg sm:text-xl">Naturis</div>
+                <div className="text-xs sm:text-sm text-cyan-300 tracking-wider">TURISMO</div>
               </div>
             </Link>
           </div>
@@ -123,8 +123,8 @@ export function Header({ showBackButton = false, backUrl = "/" }: HeaderProps) {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button className="lg:hidden text-white p-1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 

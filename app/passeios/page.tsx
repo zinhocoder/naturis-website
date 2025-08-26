@@ -42,62 +42,62 @@ export default function ToursPage() {
       <Header showBackButton={true} backUrl="/" />
       
       {/* Hero Section */}
-      <div className="relative h-[50vh] overflow-hidden pt-20">
+      <div className="relative h-[40vh] sm:h-[50vh] overflow-hidden pt-16 sm:pt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40 z-10" />
         <Image src="/images/hero-background.jpg" alt="Nossos Passeios" fill className="object-cover" priority />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-6">
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+          <div className="text-center text-white max-w-4xl px-4 sm:px-6">
+            <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
               Nossos Passeios
             </h1>
-            <p className="text-xl text-gray-200">Descubra as maravilhas da Tríplice Fronteira</p>
+            <p className="text-lg sm:text-xl text-gray-200">Descubra as maravilhas da Tríplice Fronteira</p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {Object.entries(toursByCountry).map(([country, tours]) => (
-          <div key={country} className="mb-16">
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-4xl">{countryFlags[country as keyof typeof countryFlags]}</span>
-              <h2 className="text-4xl font-bold text-slate-800">
+          <div key={country} className="mb-12 sm:mb-16">
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <span className="text-3xl sm:text-4xl">{countryFlags[country as keyof typeof countryFlags]}</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-800">
                 {countryNames[country as keyof typeof countryNames][language]}
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
               {tours.map((tour) => (
                 <Link key={tour.id} href={`/passeios/${tour.id}`}>
                   <Card className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
-                    <div className="relative h-64 overflow-hidden rounded-t-lg">
+                    <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-lg">
                       <Image
                         src={tour.images[0] || "/placeholder.svg"}
                         alt={tour.name[language]}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
                         <Badge
-                          className={`bg-gradient-to-r ${countryColors[country as keyof typeof countryColors]} text-white`}
+                          className={`bg-gradient-to-r ${countryColors[country as keyof typeof countryColors]} text-white text-xs sm:text-sm`}
                         >
                           {countryNames[country as keyof typeof countryNames][language]}
                         </Badge>
                       </div>
-                      <div className="absolute top-4 right-4">
-                        <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
+                      <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
+                        <div className="flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-full text-xs sm:text-sm">
                           <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                           <span>{tour.rating}</span>
                         </div>
                       </div>
                     </div>
 
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
+                    <CardContent className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                         {tour.name[language]}
                       </h3>
-                      <p className="text-slate-600 text-sm mb-4 line-clamp-3">{tour.description[language]}</p>
+                      <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">{tour.description[language]}</p>
 
-                      <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+                      <div className="flex items-center justify-between text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
                           <span>{tour.duration}</span>

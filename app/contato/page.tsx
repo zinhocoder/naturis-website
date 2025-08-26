@@ -179,15 +179,15 @@ Mensagem: ${formData.message}`
       <Header showBackButton={true} backUrl="/" />
       
       {/* Hero Section */}
-      <div className="relative h-[40vh] overflow-hidden pt-20">
+      <div className="relative h-[35vh] sm:h-[40vh] overflow-hidden pt-16 sm:pt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40 z-10" />
         <Image src="/images/hero-background.jpg" alt="Contato Naturis Turismo" fill className="object-cover" priority />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-6">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+          <div className="text-center text-white max-w-4xl px-4 sm:px-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
               {currentContent.title}
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto">{currentContent.subtitle}</p>
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto">{currentContent.subtitle}</p>
           </div>
         </div>
       </div>
